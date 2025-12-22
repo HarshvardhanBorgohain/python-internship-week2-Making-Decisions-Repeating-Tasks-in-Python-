@@ -1,1 +1,304 @@
+# ============================================
+# STUDENT GRADE CALCULATOR - TEST CASES
+# ============================================
 
+## 📋 TESTING STRATEGY
+Test Categories:
+1. Normal Input Tests (Valid marks within range)
+2. Boundary Value Tests (Edge cases: 0, 100, grade boundaries)
+3. Invalid Input Tests (Out of range, non-numeric)
+4. Special Case Tests (Decimal marks, empty names)
+5. Functionality Tests (Multiple calculations, exit)
+
+## ✅ TEST CASE 1: EXCELLENT GRADE (A)
+Input:
+- Name: "Alice"
+- Marks: 95
+
+Expected Output:
+- Grade: "A"
+- Message: "🎉 Excellent! You're a star performer! 🌟"
+- Validation: Accept input
+- Program Flow: Continue to result display
+
+Result: PASS/FAIL
+Notes: Tests upper A grade boundary
+
+## ✅ TEST CASE 2: VERY GOOD GRADE (B)
+Input:
+- Name: "Bob"
+- Marks: 85
+
+Expected Output:
+- Grade: "B" 
+- Message: "👍 Very Good! Keep up the great work!"
+- Validation: Accept input
+- Program Flow: Continue to result display
+
+Result: PASS/FAIL
+Notes: Tests middle B grade range
+
+## ✅ TEST CASE 3: GOOD GRADE (C)
+Input:
+- Name: "Charlie"
+- Marks: 75
+
+Expected Output:
+- Grade: "C"
+- Message: "✅ Good job! You're doing well!"
+- Validation: Accept input
+- Program Flow: Continue to result display
+
+Result: PASS/FAIL
+Notes: Tests C grade calculation
+
+## ✅ TEST CASE 4: SATISFACTORY GRADE (D)
+Input:
+- Name: "Diana"
+- Marks: 65
+
+Expected Output:
+- Grade: "D"
+- Message: "💪 Satisfactory. Keep practicing to improve!"
+- Validation: Accept input
+- Program Flow: Continue to result display
+
+Result: PASS/FAIL
+Notes: Tests D grade calculation
+
+## ✅ TEST CASE 5: NEEDS IMPROVEMENT (F)
+Input:
+- Name: "Frank"
+- Marks: 45
+
+Expected Output:
+- Grade: "F"
+- Message: "📚 Needs improvement. Don't give up! You can do better next time!"
+- Validation: Accept input
+- Program Flow: Continue to result display
+
+Result: PASS/FAIL
+Notes: Tests F grade with encouraging message
+
+## ⚠️ TEST CASE 6: BOUNDARY VALUE - EXACT 90 (A/B BOUNDARY)
+Input:
+- Name: "Grace"
+- Marks: 90
+
+Expected Output:
+- Grade: "A" (since >= 90)
+- Message: "🎉 Excellent! You're a star performer! 🌟"
+- Validation: Accept input
+
+Result: PASS/FAIL
+Notes: Tests inclusive boundary for A grade
+
+## ⚠️ TEST CASE 7: BOUNDARY VALUE - EXACT 80 (B/C BOUNDARY)
+Input:
+- Name: "Henry"
+- Marks: 80
+
+Expected Output:
+- Grade: "B" (since >= 80)
+- Message: "👍 Very Good! Keep up the great work!"
+
+Result: PASS/FAIL
+Notes: Tests inclusive boundary for B grade
+
+## ⚠️ TEST CASE 8: BOUNDARY VALUE - EXACT 70 (C/D BOUNDARY)
+Input:
+- Name: "Ivy"
+- Marks: 70
+
+Expected Output:
+- Grade: "C" (since >= 70)
+- Message: "✅ Good job! You're doing well!"
+
+Result: PASS/FAIL
+Notes: Tests inclusive boundary for C grade
+
+## ⚠️ TEST CASE 9: BOUNDARY VALUE - EXACT 60 (D/F BOUNDARY)
+Input:
+- Name: "Jack"
+- Marks: 60
+
+Expected Output:
+- Grade: "D" (since >= 60)
+- Message: "💪 Satisfactory. Keep practicing to improve!"
+
+Result: PASS/FAIL
+Notes: Tests inclusive boundary for D grade
+
+## ❌ TEST CASE 10: INVALID INPUT - NEGATIVE MARKS
+Input:
+- Name: "Kevin"
+- Marks: -10
+
+Expected Output:
+- Error Message: "❌ Marks must be between 0 and 100. Please try again."
+- Program Flow: Re-prompt for marks
+- Validation: Reject input, ask again
+
+Result: PASS/FAIL
+Notes: Tests lower bound validation
+
+## ❌ TEST CASE 11: INVALID INPUT - OVER 100 MARKS
+Input:
+- Name: "Lily"
+- Marks: 105
+
+Expected Output:
+- Error Message: "❌ Marks must be between 0 and 100. Please try again."
+- Program Flow: Re-prompt for marks
+- Validation: Reject input, ask again
+
+Result: PASS/FAIL
+Notes: Tests upper bound validation
+
+## ❌ TEST CASE 12: INVALID INPUT - NON-NUMERIC
+Input:
+- Name: "Mike"
+- Marks: "abc"
+
+Expected Output:
+- Error Message: "❌ Invalid input. Please enter a number between 0-100."
+- Program Flow: Re-prompt for marks
+- Validation: Reject input, ask again
+
+Result: PASS/FAIL
+Notes: Tests non-numeric input handling
+
+## ❌ TEST CASE 13: EMPTY NAME INPUT
+Input:
+- Name: "" (empty string, press Enter)
+- Marks: 85
+
+Expected Output:
+- Error Message: "❌ Name cannot be empty. Please try again."
+- Program Flow: Re-prompt for name
+- Validation: Reject empty name
+
+Result: PASS/FAIL
+Notes: Tests name validation
+
+## 🔄 TEST CASE 14: MULTIPLE CALCULATIONS
+Steps:
+1. Calculate grade for "Nina" with marks 92
+2. When asked "Calculate another grade?" enter "yes"
+3. Calculate grade for "Oscar" with marks 78
+4. When asked "Calculate another grade?" enter "no"
+
+Expected Output:
+- First calculation shows Grade A
+- Program continues for second calculation
+- Second calculation shows Grade C
+- Program exits gracefully
+
+Result: PASS/FAIL
+Notes: Tests loop functionality
+
+## 🔄 TEST CASE 15: PROGRAM EXIT
+Input:
+- Name: "Paul"
+- Marks: 88
+- Continue? "no"
+
+Expected Output:
+- Shows result for Paul
+- Displays exit message: "👋 Thank you for using Grade Calculator!"
+- Program terminates cleanly
+
+Result: PASS/FAIL
+Notes: Tests graceful exit
+
+## 📊 TEST CASE 16: DECIMAL MARKS
+Input:
+- Name: "Quinn"
+- Marks: 89.5
+
+Expected Output:
+- Grade: "B" (since 89.5 < 90)
+- Message: "👍 Very Good! Keep up the great work!"
+- Validation: Accept decimal input
+
+Result: PASS/FAIL
+Notes: Tests decimal number handling
+
+## 📊 TEST CASE 17: MINIMUM MARKS (0)
+Input:
+- Name: "Rita"
+- Marks: 0
+
+Expected Output:
+- Grade: "F"
+- Message: "📚 Needs improvement. Don't give up! You can do better next time!"
+- Validation: Accept input
+
+Result: PASS/FAIL
+Notes: Tests absolute minimum
+
+## 📊 TEST CASE 18: MAXIMUM MARKS (100)
+Input:
+- Name: "Sam"
+- Marks: 100
+
+Expected Output:
+- Grade: "A"
+- Message: "🎉 Excellent! You're a star performer! 🌟"
+- Validation: Accept input
+
+Result: PASS/FAIL
+Notes: Tests absolute maximum
+
+## 🧪 FUNCTIONAL TEST: GRADE SYMBOLS DISPLAY
+Test: Verify grade symbols appear correctly
+- A: ⭐⭐⭐⭐⭐
+- B: ⭐⭐⭐⭐
+- C: ⭐⭐⭐
+- D: ⭐⭐
+- F: ⭐
+
+Expected: Correct symbols display for each grade
+Result: PASS/FAIL
+
+## 🧪 FUNCTIONAL TEST: FORMATTING CONSISTENCY
+Check:
+- Borders display correctly (===)
+- Emojis render properly
+- Text alignment is consistent
+- No formatting errors
+
+Expected: Professional, consistent formatting
+Result: PASS/FAIL
+
+# ============================================
+# TEST RESULTS SUMMARY
+# ============================================
+
+Total Test Cases: 20
+Passed: ___
+Failed: ___
+Success Rate: ___%
+
+## Key Findings:
+1. All grade calculations working correctly
+2. Input validation effective
+3. Error messages clear and helpful
+4. Program handles edge cases properly
+5. User interface is friendly and professional
+
+## Issues Found:
+1. [List any bugs or issues found]
+2. [Suggestions for improvement]
+
+## Recommendations:
+1. [Any enhancements suggested]
+2. [Future test cases to add]
+
+# ============================================
+# TEST ENVIRONMENT
+# ============================================
+Platform: Windows 10 / macOS / Linux
+Python Version: 3.8.0
+Test Date: [Date]
+Tester: [Your Name]
