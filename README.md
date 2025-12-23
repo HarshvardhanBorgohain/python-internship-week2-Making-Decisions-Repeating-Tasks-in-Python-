@@ -63,7 +63,8 @@ LOOP → Ask to continue or exit
 END → Graceful termination
 
 ### 👨🏻‍💻 Code Structure </>
-   grade_calculator.py
+
+grade_calculator.py
    │
    ├── 📄 MODULE DOCSTRING
    │   "Student Grade Calculator..."
