@@ -50,3 +50,14 @@ Build a **Student Grade Calculator** - A Python console application that automat
 ---
 
 #### **Technical Architecture:**
+  START → Welcome message
+
+INPUT → Get validated student name & marks
+
+PROCESS → Calculate grade using if-elif-else
+
+OUTPUT → Display formatted result with encouragement
+
+LOOP → Ask to continue or exit
+
+END → Graceful termination
