@@ -61,3 +61,35 @@ OUTPUT → Display formatted result with encouragement
 LOOP → Ask to continue or exit
 
 END → Graceful termination
+
+### 👨🏻‍💻 Code Structure </>
+   grade_calculator.py
+   │
+   ├── 📄 MODULE DOCSTRING
+   │   "Student Grade Calculator..."
+   │
+   ├── ⚙️  get_student_info()
+   │   ├── Input validation loop
+   │   ├── Name validation (non-empty)
+   │   └── Marks validation (0-100)
+   │
+   ├── 📊 calculate_grade()
+   │   ├── if-elif-else logic
+   │   ├── A-F grading scale
+   │   └── Encouraging messages
+   │
+   ├── 🖥️ display_result()
+   │   ├── Formatted output
+   │   ├── Grade-specific notes
+   │   └── Visual borders
+   │
+   ├── ⭐ get_grade_symbol()
+   │   └── Star rating mapping
+   │
+   ├── 🎯 main()
+   │   ├── Program controller
+   │   ├── Loop for multiple students
+   │   └── Error handling
+   │
+   └── ▶️ ENTRY POINT
+       └── if __name__ == "__main__"
